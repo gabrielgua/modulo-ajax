@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container mt-5">
         <form id="form-pedido">
-            <div class="row mt-5 mb-2">
+            <!-- <div class="row mt-5 mb-2">
                 <h4>Dados básicos</h4>
             </div>
             <div class="row">
@@ -23,26 +23,51 @@
                 <div class="col-4">
                     <input id="email" type="email" class="form-control" placeholder="E-mail">
                 </div>
+            </div> -->
+            <div class="row my-3">
+                <h3>Dados entrega</h3>
             </div>
-            <div class="row mt-3">
-                <h4>Dados entrega</h4>
+            <div class="row">
+                <div class="col-12 col-sm-4 mb-3">
+                    <label for="cep" class="form-label">CEP</label>
+                    <div class="input-group has-validation">
+                        <input id="cep" type="text" class="form-control" placeholder="CEP" required>
+                        <span id="cep-icon" class="input-group-text">
+                            <i id="i-search" class="bi bi-search"></i>
+                            <i id="i-valid" class="d-none bi bi-check-lg text-success" ></i>
+                            <i id="i-error" class="d-none bi bi-x-lg text-danger"></i>
+                            
+                            <span class="d-none spinner-border spinner-border-sm"></span>
+                        </span>
+                        <div class="invalid-feedback">
+                            CEP inválido.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-8 mb-3">
+                    <label for="endereco" class="form-label">Endereço</label>
+                    <input id="endereco" type="text" class="form-control" placeholder="Endereço" disabled readonly>
+                </div>
             </div>
-            <div class="row mb-5">
-                <div class="col-3 d-flex gap-3">
-                    <input id="cep" type="text" class="form-control" placeholder="CEP">
-                    <button id="btn-buscar-cep" type="button" class="btn btn-primary">
-                        <i class="bi bi-search"></i>
-                        <span class="d-none spinner-border spinner-border-sm"></span>
-                    </button>
+            <div class="row mb-3">
+                <div class="col-6 col-sm-4 mb-3">
+                    <label for="bairro" class="form-label">Bairro</label>
+                    <input id="bairro" type="text" class="form-control" placeholder="Bairro" disabled readonly> 
                 </div>
-                <div class="col-7">
-                    <input id="endereco" type="text" class="form-control" placeholder="Endereço">
+                <div class="col-6 col-sm-4 mb-3">
+                    <label for="cidade" class="form-label">Cidade</label>
+                    <input id="cidade" type="text" class="form-control" placeholder="Cidade" disabled readonly> 
                 </div>
-                <div class="col-2">
+                <div class="col-6 col-sm-2 mb-3">
+                    <label for="uf" class="form-label">Estado</label>
+                    <input id="uf" type="text" class="form-control" placeholder="UF" disabled readonly> 
+                </div>
+                <div class="col-6 col-sm-2 mb-3">
+                    <label for="numero" class="form-label">Número</label>
                     <input type="number" class="form-control" placeholder="Número">
                 </div>
             </div>
-            <button type="submit" class="btn btn-success">
+            <button type="submit" class="btn btn-primary">
                 Enviar pedido
             </button>
         </form>
